@@ -21,7 +21,7 @@ defmodule Rackex.Core do
     end
   end
 
-  defmacro lambda(param1, param2, do: expr) do
+  defmacro lambda({param1, param2}, do: expr) do
     quote do
       fn unquote(param1), unquote(param2) ->
         unquote(expr)

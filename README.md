@@ -1,11 +1,8 @@
 # Rackex
 
-**TODO: Add description**
+LISP-like syntax using Elixir
 
 ## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `rackex` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +12,22 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/rackex](https://hexdocs.pm/rackex).
+## Usage
+You can use Rackex module and experience its power rs.
+```elixir
+use Rackex
 
+(module Start, do: (
+  (define (say_hello), do: (
+    "Hello World!"))))
+```
+
+Let's define a lambda functions that sums.
+```elixir
+use Rackex
+
+(lambda {a, b}, do: (
+    a + b)).(2, 4))
+```
+
+Updates coming soon...
